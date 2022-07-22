@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-postgres-ts-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "concurrently \"tsc --watch\" \"ts-node-dev src/index.ts\"",
+    "lint": "ts-standard",
+    "start": "node build/index.js"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.6.5",
+    "concurrently": "^7.3.0",
+    "ts-node-dev": "^2.0.0",
+    "ts-standard": "^11.0.0",
+    "typescript": "4.7.4"
+  },
+  "keywords": [],
+  "author": "LyricalString",
+  "license": "ISC",
+  "eslintConfig": {
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "extends": [
+      "./node_modules/ts-standard/eslintrc.json"
+    ]
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.18.1",
+    "pg": "^8.7.3"
+  }
+}
